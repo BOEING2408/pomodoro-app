@@ -159,7 +159,7 @@ class PrankLockApp:
     # ── 窗口设置（手动全屏，不用 -fullscreen）────────────────────
     def _setup_window(self):
         r = self.root
-        r.title("🍅 专注模式 — 锁定中")
+        r.title("专注模式 - 锁定中")
         r.configure(bg="#0d1117")
 
         sw = r.winfo_screenwidth()
@@ -191,7 +191,7 @@ class PrankLockApp:
         BLUE  = "#58a6ff"
 
         # 顶部标题
-        tk.Label(r, text="🍅  专 注 模 式  🍅",
+        tk.Label(r, text="[ 专 注 模 式 ]",
                  font=("Microsoft YaHei", 28, "bold"),
                  fg=RED, bg=BG).place(relx=0.5, rely=0.06, anchor="center")
 
@@ -238,7 +238,7 @@ class PrankLockApp:
         frame = tk.Frame(r, bg=DIM, bd=0)
         frame.place(relx=0.5, rely=0.83, anchor="center")
 
-        tk.Label(frame, text="🔐  输入解锁密码：",
+        tk.Label(frame, text="[  输入解锁密码  ]",
                  font=("Microsoft YaHei", 12), fg=GRAY, bg=DIM
                  ).pack(side="left", padx=(16, 8), pady=12)
 
@@ -275,7 +275,7 @@ class PrankLockApp:
 
     # ── 时钟 ──────────────────────────────────────────────────
     def _update_clock(self):
-        self.clock_var.set(time.strftime("📅 %Y年%m月%d日   🕐 %H:%M:%S"))
+        self.clock_var.set(time.strftime("%Y年%m月%d日   %H:%M:%S"))
         self.root.after(1000, self._update_clock)
 
     # ── 语录轮换 ──────────────────────────────────────────────
@@ -310,7 +310,7 @@ class PrankLockApp:
         if self.pwd_var.get().strip() == "OMG":
             self._unlock()
         else:
-            self.hint_var.set("❌  密码错误！提示：三个大写字母")
+            self.hint_var.set("X  密码错误！提示：三个大写字母")
             self.pwd_var.set("")
             self._shake()
             self.entry.focus_force()
