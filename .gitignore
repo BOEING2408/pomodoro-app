@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# 用户数据（本地数据文件不上传）
+pomodoro_data.json
+
+# 虚拟环境
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
